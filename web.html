@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>College Admission</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="loadContent('home')">Home</a></li>
+        <li><a href="#" onclick="loadContent('form')">Admission Form</a></li>
+        <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="content">
+      <!-- Content will be loaded here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 College Admission</p>
+  </footer>
+
+  <script>
+    // Define content for each section
+    const content = {
+      home: `
+        <h2>Welcome to Our College</h2>
+        <p>Your journey starts here.</p>
+      `,
+      form: `
+        <h2>Admission Form</h2>
+        <form>
+          <!-- Add your admission form fields here -->
+        </form>
+      `,
+      contact: `
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to contact us.</p>
+      `,
+    };
+
+    // Function to load content into the main section
+    function loadContent(section) {
+      const contentDiv = document.getElementById('content');
+      contentDiv.innerHTML = content[section];
+    }
+
+    // Initial page load
+    loadContent('home');
+  </script>
+</body>
+</html>
+
